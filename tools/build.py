@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 APP_STORE = "https://apps.apple.com/us/app/wordsprout-spelling-practice/id6741597283"
 EMAIL = "hello@wordsprout.co"
-UPDATED = "October 14, 2026"
+UPDATED = "October 16, 2026"
 APPLE = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.97-3.46-1.07-1.57-2.74-1.78-3.33-1.8-1.42-.14-2.77.83-3.49.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.6-.75 3-.75s1.79.75 3.01.72c1.24-.02 2.03-1.13 2.79-2.25.88-1.29 1.24-2.53 1.26-2.6-.03-.01-2.42-.93-2.46-3.71zM14.08 5.85c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.77-.97 2.82 1.03.08 2.07-.52 2.71-1.28z"/></svg>')
 
 
@@ -195,7 +195,7 @@ privacy = f"""
   <p>This policy explains what WordSprout collects, how it is used, and the choices you have.</p>
   <h2>Data we collect</h2>
   {ul(["Account info (email, name, and authentication identifiers).",
-       "Children's names and optional photos you add for each learner.",
+       "Children's names. Photos you add for a child stay on your device and are never uploaded.",
        "Word lists, test results, practice results, and which words each child spelled correctly, with the time.",
        "Audio recordings you create in the app.",
        "Reminder times and the names of linked devices.",
@@ -208,7 +208,7 @@ privacy = f"""
   <h2>Linked child devices</h2>
   {ul(["A child's device you link signs in without an email or Apple ID. It gets an anonymous identifier tied to your account.",
        "It receives only the lists and progress of the children you choose, and sends their practice results back to you.",
-       "Unlinking the device removes your family's data from it."])}
+       "Unlinking a device stops its updates and hides your family's lists on it. They stay on the device so practice saved offline isn't lost if you link it again; deleting WordSprout from the device removes them."])}
   <h2>Cloud sync and providers</h2>
   {ul(["Supabase stores your account data and synced content.",
        "Apple Sign In and Google Sign-In are available for authentication.",
