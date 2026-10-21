@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A spelling list for you · WordSprout</title>
+<meta name="description" content="Add this week’s spelling words to WordSprout with a code.">
+<meta name="apple-itunes-app" content="app-id=6741597283">
+<meta property="og:title" content="A spelling list for you · WordSprout">
+<meta property="og:description" content="Add this week’s spelling words to WordSprout with a code.">
+<meta property="og:image" content="https://wordsprout.co/img/og.jpg">
+<meta property="og:url" content="https://wordsprout.co/s/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFD60A">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.code{font-size:44px;font-weight:900;letter-spacing:.12em;margin:8px 0 4px}
+.steps li{margin:6px 0}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
+.button[hidden]{display:none}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="/"><img src="/img/bee.png" alt="" width="40" height="40">WordSprout</a>
+  <nav class="nav" aria-label="Main"><a href="/">Home</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+</div></header>
+<main>
+
+<article class="doc"><div class="wrap">
+  <h1>A spelling list for you</h1>
+  <p class="updated" id="intro">Someone shared a spelling list with you. Add it to WordSprout with this code:</p>
+  <p class="code" id="code" aria-live="polite">Use the code you were given</p>
+  <div class="actions">
+    <a class="button" id="open" href="#" hidden>Open in WordSprout</a>
+    <a class="button secondary" href="https://apps.apple.com/app/id6741597283">Get WordSprout on the App Store</a>
+  </div>
+  <h2>How to add it</h2>
+  <ol class="steps">
+    <li>Get WordSprout from the App Store. It’s free.</li>
+    <li>Open WordSprout and tap + to make a new list.</li>
+    <li>Choose Use a code and enter <strong id="code-inline">the code</strong>, or scan the card’s QR code there.</li>
+    <li>The list, with its words and recordings, is added to your app. Your child’s practice stays private to your family.</li>
+  </ol>
+  <p class="callout">Questions? Email <a href="mailto:hello@wordsprout.co">hello@wordsprout.co</a>.</p>
+</div></article>
+
+</main>
+<footer class="site-footer"><div class="wrap">
+  <span>© 2026 WordSprout · <a href="mailto:hello@wordsprout.co">hello@wordsprout.co</a></span>
+  <nav aria-label="Footer"><a href="/support/">Support</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></nav>
+</div></footer>
+<script>
+(function () {
+  // Codes use letters and digits without look-alikes (no I, O, 0 or 1), 6 to 8 characters.
+  var raw = new URLSearchParams(location.search).get('code') || '';
+  var code = raw.toUpperCase().replace(/[^A-HJ-NP-Z2-9]/g, '');
+  if (code.length < 6 || code.length > 8) return;
+  var spaced = code.length === 6 ? code.slice(0, 3) + ' ' + code.slice(3) : code;
+  document.getElementById('code').textContent = spaced;
+  document.getElementById('code-inline').textContent = spaced;
+  document.title = 'Code ' + spaced + ' · WordSprout';
+  if (/iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+    var open = document.getElementById('open');
+    open.href = 'wordsprout://code?code=' + encodeURIComponent(code);
+    open.hidden = false;
+  }
+})();
+</script>
+</body>
+</html>
