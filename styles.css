@@ -64,7 +64,8 @@ a { color: inherit; }
 .button:focus-visible, .nav a:focus-visible, .brand:focus-visible { outline: 3px solid var(--leaf); outline-offset: 3px; }
 
 /* Hero */
-.hero { background: linear-gradient(180deg, #FFE45C 0%, var(--sun) 100%); color: #1C1A14; overflow: hidden; }
+/* No bottom padding: the phone screenshot sits on the hero's bottom edge. */
+.hero { background: linear-gradient(180deg, #FFE45C 0%, var(--sun) 100%); color: #1C1A14; overflow: hidden; padding: 64px 0 0; }
 .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center; padding: 48px 0 0; }
 .hero h1 { font-size: clamp(40px, 6vw, 68px); line-height: 1.02; margin: 0 0 16px; font-weight: 900; letter-spacing: -0.02em; }
 .hero p.lede { font-size: clamp(19px, 2.2vw, 23px); margin: 0 0 28px; color: #3D3518; max-width: 32ch; }
@@ -72,7 +73,7 @@ a { color: inherit; }
 .hero .button { background: #1C1A14; color: #FFFBEA; }
 .hero .note { font-size: 15px; color: #4A4120; }
 .hero-shot { align-self: end; justify-self: center; width: min(360px, 100%); }
-.hero-shot img { border-radius: 36px 36px 0 0; box-shadow: 0 -8px 40px rgba(60, 45, 0, 0.18); }
+.hero-shot img { display: block; width: 100%; height: auto; border-radius: 36px 36px 0 0; box-shadow: 0 -8px 40px rgba(60, 45, 0, 0.18); }
 .flowers { height: 28px; background:
   radial-gradient(circle at 12px 14px, #FF8FA3 8px, transparent 9px) 0 0 / 48px 28px repeat-x,
   linear-gradient(var(--soil), var(--soil)) 0 22px / 100% 6px no-repeat; }
