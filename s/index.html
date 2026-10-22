@@ -12,6 +12,7 @@
 <meta property="og:url" content="https://wordsprout.co/s/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FFD60A">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -20,42 +21,62 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
-.code{font-size:44px;font-weight:900;letter-spacing:.12em;margin:8px 0 4px}
-.steps li{margin:6px 0}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
-.button[hidden]{display:none}
+/* This page only: one narrow column, the code card, and the steps */
+.share { width: min(560px, 100% - 32px); margin-inline: auto; }
+.ihero .share { text-align: center; }
+.ihero .share p { margin-inline: auto; }
+.share-card [hidden] { display: none; }
+.share-card .code-big:not(.has-code) { font-size: 22px; letter-spacing: 0; }
+.share h2 { font-size: 26px; margin: 40px 0 0; }
+.share .new-here { padding: 24px; display: flex; gap: 18px; align-items: center; margin-bottom: 48px; }
+.share .new-here .phone { --w: 110px; flex: none; }
+.share .new-here b { display: block; font-size: 19px; line-height: 1.2; margin-bottom: 6px; }
+.share .new-here p { font-size: 15px; color: #3D3518; }
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<header class="site-header"><div class="wrap">
-  <a class="brand" href="/"><img src="/img/bee.png" alt="" width="40" height="40">WordSprout</a>
-  <nav class="nav" aria-label="Main"><a href="/">Home</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+<div class="ws">
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr"><div class="wrap hdr-in">
+  <a class="brand" href="/"><img src="/img/bee.png" alt="" width="42" height="42">WordSprout</a>
+  <nav class="nav" aria-label="Main"><a href="/#how">How it works</a><a href="/#kids">For kids</a><a href="/#parents">For parents</a><a href="/#pro">Pro</a><a href="/support/">Support</a></nav>
+  <a class="btn btn-sm" href="https://apps.apple.com/app/id6741597283">Get the app</a>
 </div></header>
-<main>
+<main id="main">
 
-<article class="doc"><div class="wrap">
-  <h1>A spelling list for you</h1>
-  <p class="updated" id="intro">Someone shared a spelling list with you. Add it to WordSprout with this code:</p>
-  <p class="code" id="code" aria-live="polite">Use the code you were given</p>
-  <div class="actions">
-    <a class="button" id="open" href="#" hidden>Open in WordSprout</a>
-    <a class="button secondary" href="https://apps.apple.com/app/id6741597283">Get WordSprout on the App Store</a>
+<section class="ihero" style="padding-bottom: 80px;" aria-labelledby="page-title"><div class="share">
+  <h1 id="page-title">A spelling list for you</h1>
+  <p id="intro">Someone shared a spelling list with you. Add it to WordSprout with this code.</p>
+</div><div class="meadow grow" aria-hidden="true"><div class="meadow-row"><span class="fl" style="--c: #FF8FA3; --h: 39px; --d: 0.15s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl bud" style="--c: #6FB7FF; --h: 30px; --d: 0.64s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl" style="--c: #F78FD0; --h: 45px; --d: 1.13s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl sprout" style="--c: #FF9F43; --h: 21px; --d: 0.36s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl" style="--c: #FFFFFF; --h: 34px; --d: 0.85s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl" style="--c: #B78CFF; --h: 42px; --d: 1.34s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl bud" style="--c: #FF6B6B; --h: 28px; --d: 0.57s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl" style="--c: #FF8FA3; --h: 38px; --d: 1.06s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl sprout" style="--c: #6FB7FF; --h: 20px; --d: 0.29s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl" style="--c: #F78FD0; --h: 44px; --d: 0.78s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl" style="--c: #FF9F43; --h: 33px; --d: 1.27s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl bud" style="--c: #FFFFFF; --h: 27px; --d: 0.50s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl" style="--c: #B78CFF; --h: 40px; --d: 0.99s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl" style="--c: #FF6B6B; --h: 36px; --d: 0.22s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl sprout" style="--c: #FF8FA3; --h: 22px; --d: 0.71s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl" style="--c: #6FB7FF; --h: 42px; --d: 1.20s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl bud" style="--c: #F78FD0; --h: 32px; --d: 0.43s;"><i class="stem"></i><i class="bloom"></i></span><span class="fl" style="--c: #FF9F43; --h: 38px; --d: 0.92s;"><i class="stem"></i><i class="bloom"></i></span></div><div class="soil"></div></div></section>
+
+<div class="share">
+  <div class="share-card">
+    <p style="font-weight: 800; color: #5B5546; font-size: 15px;">Your code</p>
+    <p class="code-big" id="code" aria-live="polite">Use the code you were given</p>
+    <a class="btn" id="open" href="#" hidden>Open in WordSprout</a>
+    <a class="btn btn-ghost" href="https://apps.apple.com/app/id6741597283">Get WordSprout, it’s free</a>
   </div>
   <h2>How to add it</h2>
-  <ol class="steps">
+  <ol class="share-steps">
     <li>Get WordSprout from the App Store. It’s free.</li>
     <li>Open WordSprout and tap + to make a new list.</li>
-    <li>Choose Use a code and enter <strong id="code-inline">the code</strong>, or scan the card’s QR code there.</li>
+    <li><span>Choose Use a code and enter <strong id="code-inline" style="white-space: nowrap;">the code</strong>, or scan the card’s QR code there.</span></li>
     <li>The list, with its words and recordings, is added to your app. Your child’s practice stays private to your family.</li>
   </ol>
-  <p class="callout">Questions? Email <a href="mailto:hello@wordsprout.co">hello@wordsprout.co</a>.</p>
-</div></article>
+  <div class="mode kid new-here">
+    <div class="phone"><picture><source srcset="/img/app/garden.webp" type="image/webp"><img src="/img/app/garden.jpg" alt="A child’s garden where each learned word blooms" width="600" height="1290" loading="lazy"></picture></div>
+    <div><b>New to WordSprout?</b><p>Short, happy spelling practice for kids in K–5. Every word grows into a flower.</p><a class="link-arrow" href="/" style="font-size: 16px;">See how it works<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></div>
+  </div>
+</div>
 
 </main>
-<footer class="site-footer"><div class="wrap">
-  <span>© 2026 WordSprout · <a href="mailto:hello@wordsprout.co">hello@wordsprout.co</a></span>
-  <nav aria-label="Footer"><a href="/support/">Support</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></nav>
+<footer class="ftr"><div class="wrap ftr-in">
+  <a class="brand" href="/"><img src="/img/bee.png" alt="" width="32" height="32">WordSprout</a>
+  <nav aria-label="Footer"><a href="/support/">Support</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a><a href="mailto:hello@wordsprout.co">hello@wordsprout.co</a></nav>
+  <span>© 2026 WordSprout</span>
 </div></footer>
+</div>
 <script>
 (function () {
   // Codes use letters and digits without look-alikes (no I, O, 0 or 1), 6 to 8 characters.
@@ -64,6 +85,7 @@
   if (code.length < 6 || code.length > 8) return;
   var spaced = code.length === 6 ? code.slice(0, 3) + ' ' + code.slice(3) : code;
   document.getElementById('code').textContent = spaced;
+  document.getElementById('code').classList.add('has-code');
   document.getElementById('code-inline').textContent = spaced;
   document.title = 'Code ' + spaced + ' · WordSprout';
   if (/iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
